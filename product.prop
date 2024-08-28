@@ -1,0 +1,3 @@
+# Remove PixelOS branding
+ro.custom.version= 
+ro.modversion= 
