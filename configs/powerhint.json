@@ -96,11 +96,15 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/max_pwrlevel",
       "Values": [
         "0",
-        "1"
+        "1",
+        "2",
+        "3"
       ],
       "Comments": [
-        "0 => 670000000",
-        "1 => 587000000"
+        "0 => 940000000",
+        "1 => 855000000",
+        "2 => 730000000",
+        "3 => 670000000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -115,16 +119,20 @@
         "3",
         "4",
         "5",
-        "6"
+        "6",
+        "7",
+        "8"
       ],
       "Comments": [
-        "0 => 670000000",
-        "1 => 587000000",
-        "2 => 525000000",
-        "3 => 490000000",
-        "4 => 441600000",
-        "5 => 400000000",
-        "6 => 305000000"
+        "0 => 940000000",
+        "1 => 855000000",
+        "2 => 730000000",
+        "3 => 670000000",
+        "4 => 587000000",
+        "5 => 491000000",
+        "6 => 400000000",
+        "7 => 305000000",
+        "8 => 150000000"
       ],
       "ResetOnInit": true
     },
@@ -152,15 +160,6 @@
       "Values": [
         "10000",
         "80"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "TASchedtuneBoost",
-      "Path": "/dev/stune/top-app/schedtune.boost",
-      "Values": [
-        "30",
-        "10"
       ],
       "ResetOnInit": true
     },
@@ -381,12 +380,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "TASchedtuneBoost",
-      "Duration": 0,
-      "Value": "30"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 0,
       "Value": "0"
@@ -414,6 +407,12 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
       "Value": "2597"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "7"
     },
     {
       "PowerHint": "LAUNCH",
@@ -767,13 +766,13 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "1"
+      "Value": "4"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "0"
+      "Value": "3"
     },
     {
       "PowerHint": "ML_ACC",
@@ -821,13 +820,13 @@
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "0"
+      "Value": "3"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "0"
+      "Value": "4"
     },
     {
       "PowerHint": "Flipendo",
